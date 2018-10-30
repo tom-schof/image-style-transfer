@@ -1,25 +1,29 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Axios from 'axios';
 
 class App extends Component {
+
+  state = {
+    uploadedImage: null
+  }
+
+  handleOnChange = (event) =>{
+    console.log(event.target.files[0]);
+    this.setState({
+      uploadedImage: event.target.files[0]
+    })
+  }
+
+  handleOnClick =() => {
+    Axios.post("")
+  }
+
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <input type ="file" onChange={this.handleOnChange}/>
+      <button onClick={this.handleOnClick}> Post Image</button>
       </div>
     );
   }

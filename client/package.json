@@ -4,8 +4,11 @@
   "private": true,
   "proxy": "http://localhost:3001/",
   "dependencies": {
+    "axios": "^0.18.0",
     "react": "^16.6.0",
     "react-dom": "^16.6.0",
+    "react-flip-move": "^3.0.3",
+    "react-images-upload": "^1.2.3",
     "react-scripts": "2.0.5"
   },
   "scripts": {
