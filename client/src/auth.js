@@ -5,10 +5,10 @@ import history from './history';
 export default class Auth {
   // Please use your own credentials here
   auth0 = new auth0.WebAuth({
-    domain: '',
-    clientID: '',
-    redirectUri: process.env.NODE_ENV === 'development' ? 'http://localhost:3000/callback' : '',
-    audience: '',
+    domain: 'tom-schof.auth0.com',
+    clientID: '5bd9d3f52c7743729dc2c784',
+    redirectUri: process.env.NODE_ENV === 'development' ? 'http://localhost:3000/callback' : 'https://ghostly-ghoul-81159.herokuapp.com/callback',
+    audience: 'tom-schof.auth0.comuserInfo',
     responseType: 'token id_token',
     scope: 'openid'
   });
