@@ -1,4 +1,5 @@
 //TODO: fix api routing to use get/post/put/delete appropriately
+//TODO: need more routes
 const router = require("express").Router();
 const uploadController = require("../../controllers/uploadController");
 
