@@ -3,11 +3,13 @@ const router = require("express").Router();
 const uploadController = require("../../controllers/uploadController");
 
 // Matches with "/api/" ?
+//need to modify this
 router.route("/")
   .get(uploadController.findAll)
   .post(uploadController.create);
 
-// Matches with "/api/books/:id" ?
+// Matches with "/api/upload/:id" ? 
+//need to modify this
 router
   .route("/:id")
   .get(uploadController.findById)
