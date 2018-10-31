@@ -6,12 +6,14 @@ export default class Auth {
   // Please use your own credentials here
   auth0 = new auth0.WebAuth({
     domain: 'tom-schof.auth0.com',
-    clientID: '5bd9d3f52c7743729dc2c784',
+    clientID: 'HLoeF9ve7PXXeFPvy898lGYCmL5bLowX',
     redirectUri: process.env.NODE_ENV === 'development' ? 'http://localhost:3000/callback' : 'https://ghostly-ghoul-81159.herokuapp.com/callback',
-    audience: 'tom-schof.auth0.comuserInfo',
+    // audience: 'tom-schof.auth0.comuserInfo',
     responseType: 'token id_token',
     scope: 'openid'
   });
+
+
 
   login = () => {
     this.auth0.authorize();
