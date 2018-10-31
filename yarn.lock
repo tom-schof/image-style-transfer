@@ -20,7 +20,7 @@ ansi-align@^2.0.0:
   resolved "https://registry.yarnpkg.com/ansi-align/-/ansi-align-2.0.0.tgz#c36aeccba563b89ceb556f3690f0b1d9e3547f7f"
   integrity sha1-w2rsy6VjuJzrVW82kPCx2eNUf38=
   dependencies:
-    string-width "^2.0.0"
+    string-width "^
 
 ansi-regex@^2.0.0:
   version "2.1.1"
