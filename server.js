@@ -1,26 +1,39 @@
-const express = require('express');
-const app = express();
+const express = require("express");
 
+const mongoose = require("mongoose");
+const routes = require("./routes");
+const app = express();
 const PORT = process.env.PORT || 3001;
 
 
+// Define middleware here
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+// Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
-  const path = require('path');
-  app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
-  });
 }
+// Add routes, both API and view
+app.use(routes);
 
-const mongoose = require('mongoose');
+//route all traffic to react app
+app.get("*", function(req, res) {
+  res.sendFile(path.join(__dirname, "./client/build/index.html"));
+});
 
+
+// Connect to the Mongo DB
 mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://localhost/mern",
+  process.env.MONGODB_URI || "mongodb://localhost/styledb",
   {
     useNewUrlParser: true
   }
 );
 
+
+// Start the API server
 app.listen(PORT, function() {
   console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
 });
+
+
