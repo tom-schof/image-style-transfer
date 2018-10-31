@@ -1,5 +1,5 @@
 {
-  "name": "words-dataset",
+  "name": "image-style-transfer",
   "version": "0.1.0",
   "private": true,
   "proxy": "http://localhost:3001/",
