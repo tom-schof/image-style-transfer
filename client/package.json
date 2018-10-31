@@ -3,7 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "proxy": "http://localhost:3001/",
-
+  "dependencies": {
+    "@appbaseio/reactivesearch": "^2.13.0",
+    "auth0-js": "^9.8.1",
+    "react": "^16.6.0",
+    "react-dom": "^16.6.0",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "2.0.5"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -20,23 +27,3 @@
     "not op_mini all"
   ]
 }
-
-{
-  "name": "mern",
-  "version": "0.1.0",
-  "private": true,
-  "proxy": "http://localhost:3001/",
-  "dependencies": {
-    "axios": "^0.18.0",
-    "react": "^16.0.0",
-    "react-dom": "^16.0.0",
-    "react-scripts": "1.0.14",
-    "react-router-dom": "^4.1.2",
-    "moment": "^2.22.2"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
-  }
