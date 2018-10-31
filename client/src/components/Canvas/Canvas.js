@@ -4,7 +4,7 @@ import * as ml5 from 'ml5';
 
 class Canvas extends Component {
   state = {
-    inputImg: "https://cdn-images-1.medium.com/max/1366/0*ab21Gqm4fDN1K4kg.jpg",
+    inputImg: "./img/patagonia.jpg",
     styleImg: "",
     resultImg: ""
   }
@@ -19,17 +19,20 @@ class Canvas extends Component {
   transferStyle = inputImg => {
     console.log(ml5);
     console.log(ml5.styleTransfer);
-    ml5.styleTransfer('models/wave')
+    console.log(inputImg);
+    ml5.styleTransfer('./models/wave')
       .then(style => {
         console.log(style);
         style.transfer(inputImg);
       })
       .then(result => {
         // const newImage = new Image(350, 350);
+        console.log(result);
         const newImageSrc = result.src;
         this.setState({ resultImg: newImageSrc });
         console.log(this.state.resultImg);
-      });
+      })
+      .catch(err => console.log(err));
   }
 
   render() {
