@@ -20,11 +20,8 @@ class Canvas extends Component {
     console.log(ml5);
     console.log(ml5.styleTransfer);
     console.log(inputImg);
-    ml5.styleTransfer('./models/wave')
-      .then(style => {
-        console.log(style);
-        style.transfer(inputImg);
-      })
+    ml5.styleTransfer('./models/training-img_model')
+      .then(style => style.transfer(inputImg))
       .then(result => {
         // const newImage = new Image(350, 350);
         console.log(result);
