@@ -7,7 +7,12 @@ import Saved from "./pages/Saved";
 import Community from "./pages/Community";
 import NoMatch from "./pages/NoMatch";
 import './App.css';
-
+import {
+  ReactiveBase,
+  CategorySearch,
+  RatingsFilter,
+  ResultCard
+} from '@appbaseio/reactivesearch';
 
 const App = () => (
   <Router>
@@ -24,4 +29,5 @@ const App = () => (
   </Router>
 );
 
-export default App;
+
+  export default App;
