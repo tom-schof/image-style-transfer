@@ -29,9 +29,7 @@ class Uploads extends Component {
             </Jumbotron>
           </Col>
           <Col size="md-6 sm-12">
-            <Jumbotron>
-              <h1>Books On My List</h1>
-            </Jumbotron>
+            {console.log(this.state.uploads.length)}
             {this.state.uploads.length ? (
               <List>
                 {this.state.uploads.map(image => (

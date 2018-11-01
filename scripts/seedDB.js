@@ -10,13 +10,19 @@ mongoose.connect(
 
 const uploadSeed = [
   {
-    url: "https://www.pexels.com/photo/adult-animal-beautiful-cold-313104/",
+    url: "https://images.pexels.com/photos/1170831/pexels-photo-1170831.jpeg?auto=compress&cs=tinysrgb&h=350",
+    style: "hmmm",
+    user: "Some lady 1",
+    date: new Date(Date.now())
+  },
+  {
+    url: "https://images.pexels.com/photos/313104/pexels-photo-313104.jpeg?auto=compress&cs=tinysrgb&h=350",
     style: "interesting",
     user: "Some guy1",
     date: new Date(Date.now())
   },
   {
-    url: "https://images.pexels.com/photos/1374551/pexels-photo-1374551.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
+    url: "https://images.pexels.com/photos/1374551/pexels-photo-1374551.jpeg?auto=compress&cs=tinysrgb&h=350",
     style: "what",
     user: "some dude 2",
     date: new Date(Date.now())
