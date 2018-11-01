@@ -1,4 +1,9 @@
-img {
-    height: 300px;
-    width: 300px;
+.img-thumbnail, .img-container {
+    height: 300px!important;
+    width: 300px!important;
+    box-sizing: border-box!important;
+}
+
+.img-container {
+    background-color: rgb(228, 228, 228);
 }
