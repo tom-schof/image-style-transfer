@@ -7,13 +7,14 @@ class Canvas extends Component {
     inputImg: "",
     styleModel: "",
     styleImg: "",
-    resultImg: ""
+    resultImg: "",
+    transferMsg: ""
   }
 
   styleKey = {
     new: {
       model: "./models/training-img_model",
-      img: ""
+      img: "./img/training-img.jpg"
     },
     la_muse: {
       model: "./models/la_muse",
@@ -59,14 +60,12 @@ class Canvas extends Component {
     }
 
   transferStyle = inputImg => {
-      console.log(ml5);
-      console.log(ml5.styleTransfer);
-      console.log(inputImg);
+      this.setState({transferMsg: "Styling Image..."});
       ml5.styleTransfer(this.state.styleModel)
         .then(style => style.transfer(inputImg))
         .then(result => {
           const newImageSrc = result.src;
-          this.setState({ resultImg: newImageSrc });
+          this.setState({ resultImg: newImageSrc, transferMsg: "Done!" });
         });
     }
 
@@ -87,9 +86,9 @@ class Canvas extends Component {
         <main className="canvas">
           <div className="container">
             <div className="row">
-              <div className="col-md-4 text-center">
+              <div className="col-lg-4 col-md-6 text-center">
                 <div className="img-container text-center mx-auto">
-                  <img src={this.state.inputImg} alt="input" className="img-thumbnail" />
+                  {this.state.inputImg ? <img src={this.state.inputImg} alt="input" className="img-thumbnail" /> : <p className="img-placeholder">Input Image</p>}
                 </div>
                 <form>
                   <div className="form-group">
@@ -101,14 +100,15 @@ class Canvas extends Component {
                       <option value="./img/pug.jpg">Pug</option>
                       <option value="./img/dog.jpg">Dog</option>
                       <option value="./img/dubai.jpeg">Dubai</option>
+                      <option value="./img/jessie.jpeg">Jessie</option>
                     </select>
                   </div>
                 </form>
               </div>
 
-              <div className="col-md-4 text-center">
+              <div className="col-lg-4 col-md-6 text-center">
                 <div className="img-container text-center mx-auto">
-                  <img src={this.state.styleImg} alt="result" className="img-thumbnail" />
+                  {this.state.styleImg ? <img src={this.state.styleImg} alt="result" className="img-thumbnail" /> : <p className="img-placeholder">Style Image</p>}
                 </div>
                 <form>
                   <div className="form-group">
@@ -129,10 +129,11 @@ class Canvas extends Component {
                 </form>
               </div>
 
-              <div className="col-md-4 text-center">
+              <div className="col-lg-4 col-md-6 text-center">
                 <div className="img-container text-center mx-auto">
-                  <img src={this.state.resultImg} alt="result" className="img-thumbnail" />
+                  {this.state.resultImg ? <img src={this.state.resultImg} alt="result" className="img-thumbnail" /> : <p className="img-placeholder">Result Image</p>}
                 </div>
+                <p>{this.state.transferMsg}</p>
               </div>
             </div>
 
@@ -142,7 +143,7 @@ class Canvas extends Component {
                   const inputImg = new Image(300, 300);
                   inputImg.crossOrigin = "anonymous";
                   inputImg.src = this.state.inputImg;
-                  this.transferStyle(inputImg);
+                  this.state.inputImg && this.state.styleImg ? this.transferStyle(inputImg) : this.setState({transferMsg: "Select both an input and a style image!"})  
                 }
                 }>Transfer Style</button>
               </div>
