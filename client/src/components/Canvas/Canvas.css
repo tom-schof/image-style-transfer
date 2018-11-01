@@ -10,4 +10,23 @@
 
 .img-placeholder {
     padding-top: 130px;
+}   
+
+.input-group.mb-3 {
+    margin-top: 5px!important;
+}
+
+.op {
+    margin: 0;
+    padding: 0;
+    padding-top: 130px;
+}
+
+.column {
+    min-width: 300px;
+    padding: 0;
+}
+
+select, option, .form-control {
+    font-family: 'Raleway', sans-serif;
 }
