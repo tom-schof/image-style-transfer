@@ -14,7 +14,10 @@ const uploadSchema = new Schema({
   style: {
     type: String
   },
-  dateNow: {
+  user: {
+    type: String
+  },
+  date: {
     type: Date,
     default: Date.now
   }
