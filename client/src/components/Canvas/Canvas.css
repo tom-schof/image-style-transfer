@@ -4,12 +4,17 @@
     box-sizing: border-box!important;
 }
 
+.img-thumbnail {
+    background-color: rgb(255, 226, 231)!important;
+}
+
 .img-container {
-    background-color: rgb(228, 228, 228);
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: .25rem;
 }
 
 .img-placeholder {
-    padding-top: 130px;
+    padding-top: 140px;
 }   
 
 .input-group.mb-3 {
@@ -19,7 +24,8 @@
 .op {
     margin: 0;
     padding: 0;
-    padding-top: 130px;
+    padding-top: 100px;
+    font-size: 80px!important;
 }
 
 .column {
@@ -27,6 +33,30 @@
     padding: 0;
 }
 
-select, option, .form-control {
-    font-family: 'Raleway', sans-serif;
+label, input, select, option, .form-control {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+    font-size: 0.85em!important;
+}
+
+label {
+    margin-top: 5px;
+    font-weight: 400;
+}
+
+select {
+    font-weight: 400!important;
+}
+
+label:hover, input:hover, .custom-file-input:hover, .custom-file-label:hover {
+    cursor: pointer!important;
+}
+
+.caption {
+    font-size: 1em!important;
+    font-weight: 700;
+}
+
+h1.display-4 {
+    font-size: 50px!important;
 }

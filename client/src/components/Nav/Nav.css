@@ -1,0 +1,9 @@
+.bg-primary {
+    background-color: rgb(180, 246, 255)!important;
+}
+
+.navbar-dark .navbar-brand {
+    color: black!important;
+    font-size: 25px;
+    font-weight: 400;
+}

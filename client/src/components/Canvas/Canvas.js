@@ -9,7 +9,7 @@ class Canvas extends Component {
     styleModel: "",
     styleImg: "",
     resultImg: "",
-    transferMsg: "Click below to transform your image!"
+    transferMsg: "Click to transform your image!"
   }
 
   styleKey = {
@@ -153,14 +153,16 @@ class Canvas extends Component {
               </div>
               <form>
                 <div className="form-group">
-                  <label htmlFor="input-select">Select Input Image</label>
+                  <label htmlFor="input-select" className="caption">Select Input Image</label>
                   <select className="form-control" id="input-select" name="inputImg" onChange={this.handleImgChange}>
                     <option value=""></option>
                     <option value="./img/patagonia.jpg">Patagonia</option>
                     <option value="./img/dc.jpg">DC</option>
                     <option value="./img/pug.jpg">Pug</option>
                     <option value="./img/dog.jpg">Dog</option>
-                    <option value="./img/dubai.jpeg">Dubai</option>
+                    <option value="./img/lambo.jpg">Lambo</option>
+                    <option value="./img/mountain.jpg">Mountain</option>
+                    <option value="./img/waterfall.jpeg">Waterfall</option>
                   </select>
                   <div className="input-group mb-3">
                     <div className="custom-file">
@@ -172,8 +174,8 @@ class Canvas extends Component {
               </form>
             </div>
 
-            <div className="col-lg-1 col-md-1 text-center op">
-              <h1 className="mx-auto">+</h1>
+            <div className="col-lg-1 col-md-1 text-center">
+              <h1 className="mx-auto op">+</h1>
             </div>
 
             <div className="col-lg-3 col-md-5 text-center column">
@@ -182,7 +184,7 @@ class Canvas extends Component {
               </div>
               <form>
                 <div className="form-group">
-                  <label htmlFor="style-select">Select Style Image</label>
+                  <label htmlFor="style-select" className="caption">Select Style Image</label>
                   <select className="form-control" id="style-select" name="styleImg" onChange={this.handleImgChange}>
                     <option value=""></option>
                     <option value="new">New</option>
@@ -200,18 +202,18 @@ class Canvas extends Component {
               </form>
             </div>
 
-            <div className="col-lg-1 col-md-1 text-center op">
-              <h1 className="mx-auto">=</h1>
+            <div className="col-lg-1 col-md-1 text-center">
+              <h1 className="mx-auto op">=</h1>
             </div>
 
             <div className="col-lg-3 col-md-5 text-center column">
               <div className="img-container text-center mx-auto">
                 {this.state.resultImg ? <img src={this.state.resultImg} alt="result" className="img-thumbnail" /> : <p className="img-placeholder">Result Image</p>}
               </div>
-              <label>{this.state.transferMsg}</label>
+              <label className="caption">{this.state.transferMsg}</label>
               <div className="col-sm-12 text-center">
-                <button className="btn btn-primary" onClick={() => {
-                  this.state.inputImg && this.state.styleImg ? this.handleSubmit() : this.setState({ transferMsg: "Select both an input and a style image!" })
+                <button className="btn btn-light" onClick={() => {
+                  this.state.inputImg && this.state.styleImg ? this.handleSubmit() : this.setState({ transferMsg: "Select an input and style image!" })
                 }
                 }>Transfer Style</button>
               </div>
