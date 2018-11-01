@@ -1,39 +1,28 @@
 {
-  "name": "image-style-transfer",
+  "name": "iamge-style-transfer",
   "version": "1.0.0",
-  "description": "image-style-transfer with ml5",
-  "main": "index.js",
+  "description": "",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
-    "client": "npm run start --prefix client",
-    "dev": "concurrently \"npm run start\" \"npm run client\"",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "start:prod": "node server.js",
+    "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
+    "client": "cd client && npm run start",
+    "install": "cd client && yarn install",
+    "build": "cd client && npm run build",
+    "heroku-postbuild": "npm run build"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/tom-schof/image-style-transfer.git"
-  },
-  "keywords": [
-    "ml5",
-    "maching",
-    "learning",
-    "image-style-transfer",
-    "javascript",
-    "react",
-    "authO"
-  ],
-  "author": "Brandon, Rohit, Tom D, Tom S",
+  "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/tom-schof/image-style-transfer/issues"
+  "devDependencies": {
+    "concurrently": "^3.5.0",
+    "nodemon": "^1.11.0"
   },
-  "homepage": "https://github.com/tom-schof/image-style-transfer#readme",
   "dependencies": {
-    "concurrently": "^4.0.1",
-    "express": "^4.16.4",
+    "axios": "^0.16.2",
+    "express": "^4.16.3",
     "if-env": "^1.0.4",
-    "mongoose": "^5.3.8",
+    "mongoose": "^5.0.17",
     "path": "^0.12.7"
   }
 }
