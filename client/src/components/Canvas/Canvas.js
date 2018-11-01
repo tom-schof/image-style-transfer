@@ -9,7 +9,7 @@ class Canvas extends Component {
     styleModel: "",
     styleImg: "",
     resultImg: "",
-    transferMsg: "Click to transform your image!"
+    transferMsg: "Transform your image!"
   }
 
   styleKey = {
@@ -213,7 +213,7 @@ class Canvas extends Component {
               <label className="caption">{this.state.transferMsg}</label>
               <div className="col-sm-12 text-center">
                 <button className="btn btn-light" onClick={() => {
-                  this.state.inputImg && this.state.styleImg ? this.handleSubmit() : this.setState({ transferMsg: "Select an input and style image!" })
+                  this.state.inputImg && this.state.styleImg ? this.handleSubmit() : this.setState({ transferMsg: "Select input and style image!" })
                 }
                 }>Transfer Style</button>
               </div>
