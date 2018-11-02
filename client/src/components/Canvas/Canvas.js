@@ -13,7 +13,7 @@ class Canvas extends Component {
   }
 
   styleKey = {
-    new: {
+    splatter: {
       model: "./models/training-img_model",
       img: "./img/training-img.jpg"
     },
@@ -23,7 +23,7 @@ class Canvas extends Component {
     },
     mathura: {
       model: "./models/mathura",
-      img: "./img/maturana.jpg"
+      img: "./img/unknown.png"
     },
     matta: {
       model: "./models/matta",
@@ -55,7 +55,7 @@ class Canvas extends Component {
     }
   };
 
-  styleArray = ["new", "la_muse", "mathura", "matta", "rain_princess", "scream", "udnie", "wave", "wreck", "booty"];
+  styleArray = ["splatter", "la_muse", "mathura", "matta", "rain_princess", "scream", "udnie", "wave", "wreck", "booty"];
 
   componentDidMount() {
     //   this.setState({
@@ -148,23 +148,23 @@ class Canvas extends Component {
         <div className="container">
           <div className="row mx-auto text-center">
             <div className="col-lg-3 col-md-5 text-center column">
-              <div className="img-container text-center mx-auto">
+              <div className="img-container text-center mx-auto shadow">
                 {this.state.inputImg ? <img src={this.state.inputImg} alt="input" className="img-thumbnail" /> : <p className="img-placeholder">Input Image</p>}
               </div>
               <form>
-                <div className="form-group">
-                  <label htmlFor="input-select" className="caption">Select Input Image</label>
+                <div className="form-group shadow">
+                  <label htmlFor="input-select" className="caption text-shadow">Select Input Image</label>
                   <select className="form-control" id="input-select" name="inputImg" onChange={this.handleImgChange}>
                     <option value=""></option>
-                    <option value="./img/patagonia.jpg">Patagonia</option>
                     <option value="./img/dc.jpg">DC</option>
-                    <option value="./img/pug.jpg">Pug</option>
+                    <option value="./img/mountain.jpg">Mountain</option>
+                    <option value="./img/patagonia.jpg">Patagonia</option>
+                    <option value="./img/waterfall.jpeg">Waterfall</option>
                     <option value="./img/dog.jpg">Dog</option>
                     <option value="./img/lambo.jpg">Lambo</option>
-                    <option value="./img/mountain.jpg">Mountain</option>
-                    <option value="./img/waterfall.jpeg">Waterfall</option>
+                    <option value="./img/pug.jpg">Pug</option>     
                   </select>
-                  <div className="input-group mb-3">
+                  <div className="input-group mb-3 shadow">
                     <div className="custom-file">
                       <input onChange={this.handleFileChange} type="file" className="custom-file-input" id="file-input" aria-describedby="inputGroupFileAddon" />
                       <label className="custom-file-label text-left" htmlFor="file-input">Choose file</label>
@@ -175,27 +175,27 @@ class Canvas extends Component {
             </div>
 
             <div className="col-lg-1 col-md-1 text-center">
-              <h1 className="mx-auto op">+</h1>
+              <h1 className="mx-auto op text-shadow">+</h1>
             </div>
 
             <div className="col-lg-3 col-md-5 text-center column">
-              <div className="img-container text-center mx-auto">
+              <div className="img-container text-center mx-auto shadow">
                 {this.state.styleImg ? <img src={this.state.styleImg} alt="result" className="img-thumbnail" /> : <p className="img-placeholder">Style Image</p>}
               </div>
               <form>
-                <div className="form-group">
-                  <label htmlFor="style-select" className="caption">Select Style Image</label>
+                <div className="form-group shadow">
+                  <label htmlFor="style-select" className="caption text-shadow">Select Style Image</label>
                   <select className="form-control" id="style-select" name="styleImg" onChange={this.handleImgChange}>
                     <option value=""></option>
-                    <option value="new">New</option>
-                    <option value="la_muse">La Muse</option>
-                    <option value="mathura">Mathura</option>
-                    <option value="matta">Matta</option>
                     <option value="rain_princess">Rain Princess</option>
+                    <option value="splatter">Splatter</option>
+                    <option value="la_muse">La Muse</option>
+                    <option value="wave">Wave</option>  
                     <option value="scream">Scream</option>
                     <option value="udnie">Udnie</option>
-                    <option value="wave">Wave</option>
                     <option value="wreck">Wreck</option>
+                    <option value="matta">Matta</option>
+                    <option value="mathura">Unknown (B&amp;W)</option>
                     <option value="booty">Booty</option>
                   </select>
                 </div>
@@ -203,16 +203,16 @@ class Canvas extends Component {
             </div>
 
             <div className="col-lg-1 col-md-1 text-center">
-              <h1 className="mx-auto op">=</h1>
+              <h1 className="mx-auto op text-shadow">=</h1>
             </div>
 
             <div className="col-lg-3 col-md-5 text-center column">
-              <div className="img-container text-center mx-auto">
+              <div className="img-container text-center mx-auto shadow">
                 {this.state.resultImg ? <img src={this.state.resultImg} alt="result" className="img-thumbnail" /> : <p className="img-placeholder">Result Image</p>}
               </div>
-              <label className="caption">{this.state.transferMsg}</label>
+              <label className="caption text-shadow">{this.state.transferMsg}</label>
               <div className="col-sm-12 text-center">
-                <button className="btn btn-light" onClick={() => {
+                <button className="btn btn-light shadow" onClick={() => {
                   this.state.inputImg && this.state.styleImg ? this.handleSubmit() : this.setState({ transferMsg: "Select input and style image!" })
                 }
                 }>Transfer Style</button>

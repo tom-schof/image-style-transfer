@@ -14,7 +14,7 @@
 }
 
 .img-placeholder {
-    padding-top: 140px;
+    padding-top: 130px;
 }   
 
 .input-group.mb-3 {
@@ -24,7 +24,7 @@
 .op {
     margin: 0;
     padding: 0;
-    padding-top: 100px;
+    padding-top: 90px;
     font-size: 80px!important;
 }
 
@@ -48,15 +48,32 @@ select {
     font-weight: 400!important;
 }
 
-label:hover, input:hover, .custom-file-input:hover, .custom-file-label:hover {
+input:hover, .custom-file-input:hover, .custom-file-label:hover, select:hover {
     cursor: pointer!important;
 }
 
 .caption {
+    margin-top: 10px;
+    margin-bottom: 5px;
     font-size: 1.1em!important;
     font-weight: 700;
+    background-color: none;
 }
 
 h1.display-4 {
     font-size: 50px!important;
 }
+
+.shadow {
+    -webkit-box-shadow: 3px 3px 5px 6px #ccc;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+    -moz-box-shadow:    3px 3px 5px 6px #ccc;  /* Firefox 3.5 - 3.6 */
+    box-shadow:         3px 3px 5px 6px #ccc;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+  }
+
+input, button, .form-control {
+    background-color: rgb(248, 254, 255)!important;
+}
+
+.text-shadow { 
+    text-shadow: 2px 2px 2px rgb(255, 226, 231)!important;
+  }
