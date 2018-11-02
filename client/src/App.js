@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import Saved from "./pages/Saved";
 import Community from "./pages/Community";
 import NoMatch from "./pages/NoMatch";
+import Test from "./components/Test";
 import './App.css';
 
 const App = () => (
@@ -17,6 +18,7 @@ const App = () => (
         <Route exact path="/home" component={Home} />
         <Route exact path="/saved" component={Saved} />
         <Route exact path="/community" component={Community} />
+        <Route exact path="/test" component={Test}/>
         <Route component={NoMatch} />
       </Switch>
     </div>
