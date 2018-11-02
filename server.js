@@ -1,5 +1,7 @@
 const express = require("express");
-
+const session = require("express-session");
+const passport = require('./passport');
+const MongoStore = require('connect-mongo')(session)
 const mongoose = require("mongoose");
 const routes = require("./routes");
 const app = express();
@@ -15,6 +17,28 @@ if (process.env.NODE_ENV === "production") {
 }
 // Add routes, both API and view
 app.use(routes);
+
+app.use(passport.initialize());
+app.use(passport.session()) ;// calls serializeUser and deserializeUser
+
+
+app.use(
+  session({
+  secret: 'scoooby-snacks', //pick a random string to make the hash that is generated secure
+  // store: new MongoStore({ mongooseConnection: dbConnection }),
+  resave: false, //required
+  saveUninitialized: false //required  
+})
+)
+
+
+
+app.post('/user', (req, res) => {
+  console.log('user signup');
+  req.session.username = req.body.username;
+  req.session.
+  res.end()
+})
 
 //route all traffic to react app
 app.get("*", function(req, res) {

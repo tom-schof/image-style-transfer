@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import Saved from "./pages/Saved";
 import Community from "./pages/Community";
 import NoMatch from "./pages/NoMatch";
+import Footer from "./pages/Footer";
 import './App.css';
 
 const App = () => (
@@ -19,6 +20,7 @@ const App = () => (
         <Route exact path="/community" component={Community} />
         <Route component={NoMatch} />
       </Switch>
+      <Footer />
     </div>
   </Router>
 );
