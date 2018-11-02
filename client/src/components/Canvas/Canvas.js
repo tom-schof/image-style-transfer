@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import './Canvas.css';
 import * as ml5 from 'ml5';
 import Axios from "axios";
+import API from "../../utils/API";
 
 class Canvas extends Component {
   state = {
@@ -96,7 +97,10 @@ class Canvas extends Component {
           },
           data: formData
         })
-          .then(res => console.log(res.data.secure_url))
+          .then(res => {
+            console.log(res.data.secure_url);
+            API.saveImage({url: res.data.secure_url});
+          })
           .catch(err => console.log(err))
       });
 
