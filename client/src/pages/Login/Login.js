@@ -3,10 +3,14 @@ import { Container } from "../../components/Grid";
 import Signup from "../../components/Signup";
 import LoginForm from "../../components/LoginForm"
 
-const Login = () => (
+const Login = (props) => (
+
+
+
   <Container fluid>
     <Signup />
-    <LoginForm />
+    <LoginForm updateUser={props.updateUser} loggedIn
+            />
   </Container>
 );
 

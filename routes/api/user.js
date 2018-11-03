@@ -3,10 +3,10 @@ const router = express.Router();
 const User = require('../../models/user');
 const passport = require('../../passport');
 
-router.post('/', (req, res) => {
+router.post('/signup', (req, res) => {
     console.log('user signup');
 
-    const { username, password } = req.body
+    const { username, email, password } = req.body
     // ADD VALIDATION
     User.findOne({ username: username }, (err, user) => {
         if (err) {
@@ -19,7 +19,8 @@ router.post('/', (req, res) => {
         else {
             const newUser = new User({
                 username: username,
-                password: password
+                password: password,
+                email: email
             })
             newUser.save((err, savedUser) => {
                 if (err) return res.json(err)
@@ -29,10 +30,8 @@ router.post('/', (req, res) => {
     })
 })
 
-router.post(
-    '/login',
-    function (req, res, next) {
-        console.log('routes/user.js, login, req.body: ');
+router.post('/login', function (req, res, next) {
+        console.log('routes/api/user.js, login, req.body: ');
         console.log(req.body)
         next()
     },

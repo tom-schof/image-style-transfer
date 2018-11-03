@@ -1,6 +1,7 @@
 import React from "react";
 import { Button, Modal, Form, FormGroup, Col, ControlLabel, FormControl, } from 'react-bootstrap';
 import axios from 'axios';
+import { Redirect } from 'react-router-dom'
 
 
 class LoginForm extends React.Component {
@@ -15,7 +16,8 @@ class LoginForm extends React.Component {
       this.state = {
         show: false,
         username: "",
-        password: ""
+        password: "",
+        redirectTo: null
       };
     }
     
@@ -31,25 +33,27 @@ class LoginForm extends React.Component {
     };
 
   handleSubmit(event) {
-    alert(`username: ${this.state.username} \n password: ${this.state.password}`);
+    // alert(`username: ${this.state.username} \n password: ${this.state.password}`);
     event.preventDefault();
-
-    axios.post('/user/login', {
+    console.log(event.target);
+    axios.post('/api/user/login', {
       username: this.state.username,
       password: this.state.password,
 
     })
     .then(response => {
-      console.log(response);
+      console.log("Response: " + response);
       if (response.status ===200){
         console.log("successful login");
         this.props.updateUser({
             loggedIn: true,
             username: response.data.username
-        })
+        });
+
+        console.log(this.props);
         this.setState({
           redirectTo: '/home'
-        })
+        });
       }else{
         console.log("Login error")
       }
@@ -69,9 +73,12 @@ class LoginForm extends React.Component {
     }
   
     render() {
-    
+      if (this.state.redirectTo) {
+        return (<Redirect to={{ pathname: this.state.redirectTo }} />)
+    } else {
   
       return (
+
         <div>
           
           <Button bsStyle="primary" bsSize="large" onClick={this.handleShow}>
@@ -118,6 +125,7 @@ class LoginForm extends React.Component {
       );
     }
   }
+}
 
 
 

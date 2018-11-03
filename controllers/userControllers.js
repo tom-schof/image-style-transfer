@@ -1,34 +1,34 @@
-const db = require("../models/upload");
+const db = require("../models/user");
 
-// Defining methods for the uploadController
+// Defining methods for the UserController
 module.exports = {
   findAll: function(req, res) {
-    db.Upload
+    db.User
       .find(req.query)
-      .sort({ date: -1 })
+      .sort({ username: 1 })
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
   findById: function(req, res) {
-    db.Upload
+    db.User
       .findById(req.params.id)
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
   create: function(req, res) {
-    db.Upload
+    db.User
       .create(req.body)
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
   update: function(req, res) {
-    db.Upload
+    db.User
       .findOneAndUpdate({ _id: req.params.id }, req.body)
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
   remove: function(req, res) {
-    db.Upload
+    db.User
       .findById({ _id: req.params.id })
       .then(dbModel => dbModel.remove())
       .then(dbModel => res.json(dbModel))

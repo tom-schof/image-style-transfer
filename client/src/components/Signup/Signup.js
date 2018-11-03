@@ -35,7 +35,7 @@ class Signup extends React.Component {
     console.log(`username: ${this.state.username} \n email: ${this.state.email} \n password: ${this.state.password}`);
     event.preventDefault();
 
-    axios.post('/login', {
+    axios.post('/api/user/signup', {
     username: this.state.username,
       email: this.state.email,
       password: this.state.password,
