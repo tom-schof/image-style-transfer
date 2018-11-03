@@ -58,31 +58,6 @@ class App extends Component {
           <div>
          
             <Switch>
-
- {/* <Nav updateUser={this.updateUser} loggedIn={this.state.loggedIn} />
-        {this.state.loggedIn &&
-          <p>Join the party, {this.state.username}!</p>
-        }
-        <Route
-          exact path="/"
-          component={Login} />
-        <Route
-          path="/login"
-          render={() =>
-            <Login
-              updateUser={this.updateUser}
-            />}
-        />
-        <Route
-          path="/signup"
-          render={() =>
-            <Login/>}
-        /> */}
-
-
-
-
-
               <Route exact path="/"  render={(props) => <Login {...props} updateUser={this.updateUser} /> }/>
               <Route exact path="/home" component={Home} />
               <Route exact path="/saved" component={Saved} />
