@@ -7,6 +7,7 @@ import Saved from "./pages/Saved";
 import Community from "./pages/Community";
 import NoMatch from "./pages/NoMatch";
 import Footer from "./pages/Footer";
+import Test from "./components/Test";
 import './App.css';
 import axios from "axios";
 
