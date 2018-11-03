@@ -14,7 +14,11 @@ export default {
     return axios.delete("/api/uploads/" + id);
   },
   // Saves a img to the database
-  saveImage: function(articleData) {
-    return axios.post("/api/uploads/", articleData);
+  saveImage: function(imageData) {
+    return axios.post("/api/uploads/", imageData);
   },
+
+  loginUser: function(userData) {
+    return axios.post("/user/login", userData);
+  }
 };
