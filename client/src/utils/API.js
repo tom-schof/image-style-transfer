@@ -17,4 +17,11 @@ export default {
   saveImage: function(articleData) {
     return axios.post("/api/uploads/", articleData);
   },
+  // Adds like to the database
+  addLike: function(id, num) {
+    return axios.put("/api/uploads/" + id, { $inc: { likes: 1} });
+  },
+  addDislike: function(id) {
+    return axios.put("/api/uploads/" + id, { $inc: { likes: -1} });
+  }
 };

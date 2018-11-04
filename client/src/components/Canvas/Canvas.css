@@ -64,6 +64,6 @@ h1.display-4 {
     font-size: 50px!important;
 }
 
-input, button, .form-control {
+input, .transfer-button, .form-control {
     background-color: rgb(248, 254, 255)!important;
 }

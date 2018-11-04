@@ -53,10 +53,38 @@ class Canvas extends Component {
     booty: {
       model: "./models/ambassador-booty",
       img: "./img/ambassador-booty.jpg"
+    },
+    bororo: {
+      model: "./models/bororo",
+      img: "./img/bororo.jpg"
+    },
+    moth: {
+      model: "./models/moth",
+      img: "./img/moth.jpg"
+    },
+    snorre: {
+      model: "./models/snorre",
+      img: "./img/snorre.jpg"
+    },
+    simpsons: {
+      model: "./models/generic-square",
+      img: "./img/generic-square-image.jpg"
+    },
+    reflection: {
+      model: "./models/reflection",
+      img: "./img/reflection.jpg"
+    },
+    rickmorty: {
+      model: "./models/rickmorty",
+      img: "./img/rickmorty.jpg"
+    },
+    lion: {
+      model: "./models/lion",
+      img: "./img/lion.jpg"
     }
   };
 
-  styleArray = ["splatter", "la_muse", "mathura", "matta", "rain_princess", "scream", "udnie", "wave", "wreck", "booty"];
+  styleArray = ["splatter", "la_muse", "mathura", "matta", "rain_princess", "scream", "udnie", "wave", "wreck", "booty", "bororo", "moth", "snorre", "simpsons", "reflection", "rickmorty", "lion"];
 
   componentDidMount() {
     //   this.setState({
@@ -103,7 +131,6 @@ class Canvas extends Component {
           })
           .catch(err => console.log(err))
       });
-
   }
 
   handleImgChange = event => {
@@ -201,6 +228,13 @@ class Canvas extends Component {
                     <option value="matta">Matta</option>
                     <option value="mathura">Unknown (B&amp;W)</option>
                     <option value="booty">Booty</option>
+                    <option value="bororo">Bororo</option>
+                    <option value="moth">Moth</option>
+                    <option value="snorre">Snorre</option>
+                    <option value="simpsons">Simpsons</option>
+                    <option value="reflection">Reflection</option>
+                    <option value="rickmorty">Rick &amp; Morty</option>
+                    <option value="lion">Lion</option>
                   </select>
                 </div>
               </form>
@@ -216,7 +250,7 @@ class Canvas extends Component {
               </div>
               <label className="caption text-shadow">{this.state.transferMsg}</label>
               <div className="col-sm-12 text-center">
-                <button className="btn btn-light shadow" onClick={() => {
+                <button className="btn btn-light shadow transfer-button" onClick={() => {
                   this.state.inputImg && this.state.styleImg ? this.handleSubmit() : this.setState({ transferMsg: "Select input and style image!" })
                 }
                 }>Transfer Style</button>

@@ -4,7 +4,7 @@ import Canvas from '../../components/Canvas';
 
 const Home = () => (
   <div>
-      <Jumbotron />
+      <Jumbotron title={"Image Creator"} body={"Apply one of our style models to an image of your choice and produce art using machine learning!"} />
       <Canvas />
   </div>
 );
