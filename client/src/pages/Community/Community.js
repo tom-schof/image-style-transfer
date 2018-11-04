@@ -44,8 +44,8 @@ class Uploads extends Component {
                 <div className="col-md-4 mx-auto text-center img-container-community" key={image._id}>
                   <img className="img-thumbnail" src={image.url} />
                   <p className="likes">Likes: <span>{image.likes}</span></p>
-                  <button className="btn btn-primary like-button" id={`like-${image._id}`} name={image._id} onClick={this.addLike}><span className="far fa-thumbs-up"></span></button>
-                  <button className="btn btn-primary like-button" id={`dislike-${image._id}`} name={image._id} onClick={this.addDislike}><span className="far fa-thumbs-down"></span></button>
+                  <button className="btn btn-light like-button" id={`like-${image._id}`} name={image._id} onClick={this.addLike}><span className="far fa-thumbs-up"></span></button>
+                  <button className="btn btn-light like-button" id={`dislike-${image._id}`} name={image._id} onClick={this.addDislike}><span className="far fa-thumbs-down"></span></button>
                 </div>
               ))}
             </div>

@@ -9,4 +9,5 @@
 .like-button {
     border-radius: 5px;
     margin: 0 2px;
+    background-color: rgb(248, 254, 255)!important;
 }
