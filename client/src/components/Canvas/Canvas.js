@@ -3,8 +3,8 @@ import './Canvas.css';
 import * as ml5 from 'ml5';
 import Axios from "axios";
 import API from "../../utils/API";
-import {FacebookIcon, TwitterIcon} from "react-share";
-import {FacebookShareButton, TwitterShareButton, EmailShareButton, ViberShareButton} from "react-share";
+import {FacebookIcon, TwitterIcon, EmailIcon} from "react-share";
+import {FacebookShareButton, TwitterShareButton, EmailShareButton} from "react-share";
 
 class Canvas extends Component {
     state = {
@@ -12,7 +12,10 @@ class Canvas extends Component {
         styleModel: "",
         styleImg: "",
         resultImg: "",
-        transferMsg: "Transform your image!"
+        transferStatus: false,
+        imageUrl: "",
+        transferMsg: "Transform your image!",
+
     }
 
     styleKey = {
@@ -109,6 +112,7 @@ class Canvas extends Component {
                     data: formData
                 }).then(res => {
                     console.log(res.data.secure_url);
+                    this.setState({imageUrl: res.data.secure_url});
                     API.saveImage({url: res.data.secure_url});
                 }).catch(err => console.log(err))
             });
@@ -145,7 +149,26 @@ class Canvas extends Component {
         inputImg.src = this.state.inputImg;
 
         this.transferStyle(inputImg);
+        this.setState({transferStatus: true})
     }
+    generateShareButtons = () => {
+      return (
+      <div> 
+    <FacebookShareButton
+        url={this.state.imageUrl}>
+        <FacebookIcon size={32} round={true}></FacebookIcon >
+    </FacebookShareButton>
+    <br />
+    <br />
+    <TwitterShareButton
+        url={this.state.imageUrl}>
+        <TwitterIcon size={32} round={true}></TwitterIcon >
+    </TwitterShareButton>
+    </div>
+      )
+    }
+
+
 
     render() {
         return (
@@ -232,19 +255,7 @@ class Canvas extends Component {
                         <div className="col-lg-3 col-md-5 text-center column">
                             <div className="img-container text-center mx-auto shadow">
                                 {this.state.resultImg
-                                    ? <div>
-                                            <a
-                                                id="download-button"
-                                                className="button"
-                                                href={this.state.resultImg}
-                                                download="Styled image">
-                                                <button className="btn btn-light">Download Image</button>
-                                                <FacebookShareButton
-                                                    url="https://res.cloudinary.com/cloudrohit/image/upload/v1541349125/chxlyqlq1pxitkeewiya.png">
-                                                    <FacebookIcon size={32} round={true}></FacebookIcon >
-                                                </FacebookShareButton>
-                                            </a>
-                                            <img src={this.state.resultImg} alt="result" className="img-thumbnail"/></div>
+                                    ? <img src={this.state.resultImg} alt="result" className="img-thumbnail"/>
                                     : <p className="img-placeholder">Result Image</p>}
                             </div>
                             <label className="caption text-shadow">{this.state.transferMsg}</label>
@@ -257,6 +268,12 @@ class Canvas extends Component {
                                         : this.setState({transferMsg: "Select input and style image!"})
                                 }}>Transfer Style</button>
                             </div>
+                            <div className="share-container">
+                            {
+                              this.state.transferStatus ?
+                              this.generateShareButtons()
+                                    : null }
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -266,3 +283,15 @@ class Canvas extends Component {
 }
 
 export default Canvas;
+
+{/* <a
+id="download-button"
+className="button"
+href={this.state.resultImg}
+download="Styled image">
+<button className="btn btn-light">Download Image</button>
+</a>
+<FacebookShareButton
+    url="https://res.cloudinary.com/cloudrohit/image/upload/v1541349125/chxlyqlq1pxitkeewiya.png">
+    <FacebookIcon size={32} round={true}></FacebookIcon >
+</FacebookShareButton> */}
