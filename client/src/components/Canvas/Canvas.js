@@ -212,7 +212,7 @@ class Canvas extends Component {
 
             <div className="col-lg-3 col-md-5 text-center column">
               <div className="img-container text-center mx-auto shadow">
-                {this.state.resultImg ? <img src={this.state.resultImg} alt="result" className="img-thumbnail" /> : <p className="img-placeholder">Result Image</p>}
+                {this.state.resultImg ? <div><a id="download-button" className="button" href={this.state.resultImg} download="Styled image"><button className="btn btn-light">Download Image</button></a><img src={this.state.resultImg} alt="result" className="img-thumbnail" /></div> : <p className="img-placeholder">Result Image</p>}
               </div>
               <label className="caption text-shadow">{this.state.transferMsg}</label>
               <div className="col-sm-12 text-center">
