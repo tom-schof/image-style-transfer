@@ -1,3 +1,4 @@
 module.exports = {
-  Upload: require("./upload")
+  Upload: require("./upload"),
+  User: require("./user"),
 };
