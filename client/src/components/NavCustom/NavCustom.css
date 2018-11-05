@@ -8,10 +8,12 @@
     position: relative !important;
 }
 
-.navbar-dark .navbar-brand {
+
+.navbar {
     color: black!important;
-    font-size: 25px;
+    font-size: 2rem;
     font-weight: 700;
+    background-color: rgb(248, 254, 255)!important;
 }
 
 .shadow-nav {
@@ -30,4 +32,7 @@
 .links{
     padding: 10px !important;
     text-align: center;
+}
+.navbar-brand {
+    margin-bottom: 0;
 }

@@ -17,6 +17,10 @@ const uploadSchema = new Schema({
   user: {
     type: String
   },
+  likes: {
+    type: Number,
+    default: 0
+  },
   date: {
     type: Date,
     default: Date.now

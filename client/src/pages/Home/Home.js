@@ -7,9 +7,10 @@ const Home = (props) => (
   <div>
     {/* <Logout updateUser={props.updateUser} /> */}
     <NavLogout updateUser={props.updateUser} />
-      <Jumbotron />
-      <Canvas />
+     
 
+      <Jumbotron title={"Image Creator"} body={"Apply one of our style models to an image of your choice and produce art using machine learning!"} />
+      <Canvas username={props.username}/>
   </div>
 );
 
