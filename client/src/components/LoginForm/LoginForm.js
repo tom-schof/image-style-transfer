@@ -17,7 +17,8 @@ class LoginForm extends React.Component {
         show: false,
         username: "",
         password: "",
-        redirectTo: null
+        redirectTo: null,
+        error: ""
       };
     }
     
@@ -43,7 +44,7 @@ class LoginForm extends React.Component {
     })
     .then(response => {
       console.log("Response: " + response);
-      if (response.status ===200){
+      if (response.status === 200){
         console.log("successful login");
         this.props.updateUser({
             loggedIn: true,
@@ -60,7 +61,9 @@ class LoginForm extends React.Component {
     })
     .catch(error =>{
       console.log("Login server error: " + error);
-      
+      this.setState({
+        error: 'Error: Incorrect username or password'
+      });
     })
   }
   
@@ -114,7 +117,8 @@ class LoginForm extends React.Component {
                     <Button type="submit">Log in</Button>
                     </Col>
                 </FormGroup>
-              </Form>;
+              </Form>
+              <div className="error" >{this.state.error}</div>
 
             </Modal.Body>
             <Modal.Footer>

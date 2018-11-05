@@ -1,6 +1,7 @@
 import React from "react";
 import { Button, Modal, Form, FormGroup, Col, ControlLabel, FormControl, Checkbox } from 'react-bootstrap';
 import axios from 'axios';
+import { Redirect } from 'react-router-dom'
 
 
 class Signup extends React.Component {
@@ -16,7 +17,8 @@ class Signup extends React.Component {
         show: false,
         username: "",
         email: "",
-        password: ""
+        password: "",
+        error: ""
       };
     }
     
@@ -32,7 +34,7 @@ class Signup extends React.Component {
     };
 
   handleSubmit(event) {
-    console.log(`username: ${this.state.username} \n email: ${this.state.email} \n password: ${this.state.password}`);
+    // console.log(`username: ${this.state.username} \n email: ${this.state.email} \n password: ${this.state.password}`);
     event.preventDefault();
 
     axios.post('/api/user/signup', {
@@ -42,14 +44,22 @@ class Signup extends React.Component {
 
     })
     .then(response => {
-      console.log(response);
-      if (response.data){
-        console.log("successful signup");
+      console.log(response.data.error);
+      if (response.data.error){
+        console.log("Sign up error");
         this.setState({
-          redirectTo: '/login'
-        })
+          error: response.data.error
+        });
+
+        console.log(this.state.error);
+        
       }else{
-        console.log("Sign up error")
+        console.log("successful signup");
+        this.handleClose();
+        this.setState({
+          redirectTo: '/home'
+        })
+
       }
     })
     .catch(error =>{
@@ -67,8 +77,10 @@ class Signup extends React.Component {
     }
   
     render() {
+      if (this.state.redirectTo) {
+        return (<Redirect to={{ pathname: this.state.redirectTo }} />)
+    } else {
     
-  
       return (
         <div>
           
@@ -110,16 +122,11 @@ class Signup extends React.Component {
 
                 <FormGroup>
                     <Col smOffset={2} sm={10}>
-                    <Checkbox>Remember me</Checkbox>
+                    <Button type="submit">Sign up</Button>
                     </Col>
                 </FormGroup>
-
-                <FormGroup>
-                    <Col smOffset={2} sm={10}>
-                    <Button type="submit">Sign in</Button>
-                    </Col>
-                </FormGroup>
-              </Form>;
+              </Form>
+                <div className="error" >{this.state.error}</div>
 
             </Modal.Body>
             <Modal.Footer>
@@ -130,6 +137,7 @@ class Signup extends React.Component {
       );
     }
   }
+}
   
   // render(<Signup />);
 
