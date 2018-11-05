@@ -61,7 +61,7 @@ class App extends Component {
               <Route exact path="/"  render={(props) => <Login {...props} updateUser={this.updateUser} /> }/>
               <Route exact path="/home" component={Home} />
               <Route exact path="/saved" component={Saved} />
-              <Route exact path="/community" component={Community} />z
+              <Route exact path="/community" component={Community} />
               <Route component={NoMatch} />
             </Switch>
             <Footer />
