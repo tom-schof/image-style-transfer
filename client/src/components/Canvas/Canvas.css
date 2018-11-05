@@ -67,3 +67,7 @@ h1.display-4 {
 input, button, .form-control {
     background-color: rgb(248, 254, 255)!important;
 }
+
+#share-container{
+    margin-top: 10px
+}
