@@ -35,7 +35,7 @@ class Uploads extends Component {
 
   render() {
     return (
-      <Container fluid>
+      <div>
         <Jumbotron title={"Community Style Transfer Images"} body={"Check out the art that other users created!"} />
         {this.state.uploads.length ? (
           <div className="container">
@@ -53,7 +53,7 @@ class Uploads extends Component {
         ) : (
             <h3>No Style Transfer Images to Display</h3>
           )}
-      </Container>
+      </div>
     );
   }
 }

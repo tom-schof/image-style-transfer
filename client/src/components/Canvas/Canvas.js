@@ -81,10 +81,14 @@ class Canvas extends Component {
     lion: {
       model: "./models/lion",
       img: "./img/lion.jpg"
+    },
+    zebra: {
+      model: "./models/zebra",
+      img: "./img/zebra.jpg"
     }
   };
 
-  styleArray = ["splatter", "la_muse", "mathura", "matta", "rain_princess", "scream", "udnie", "wave", "wreck", "booty", "bororo", "moth", "snorre", "simpsons", "reflection", "rickmorty", "lion"];
+  styleArray = ["splatter", "la_muse", "mathura", "matta", "rain_princess", "scream", "udnie", "wave", "wreck", "booty", "bororo", "moth", "snorre", "simpsons", "reflection", "rickmorty", "lion", "zebra"];
 
   componentDidMount() {
     //   this.setState({
@@ -235,6 +239,7 @@ class Canvas extends Component {
                     <option value="reflection">Reflection</option>
                     <option value="rickmorty">Rick &amp; Morty</option>
                     <option value="lion">Lion</option>
+                    <option value="zebra">Zebra</option>
                   </select>
                 </div>
               </form>
