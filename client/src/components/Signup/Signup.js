@@ -139,7 +139,6 @@ class Signup extends React.Component {
   }
 }
   
-  // render(<Signup />);
 
 
   export default Signup;
