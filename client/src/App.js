@@ -7,6 +7,8 @@ import Saved from "./pages/Saved";
 import Community from "./pages/Community";
 import NoMatch from "./pages/NoMatch";
 import Footer from "./pages/Footer";
+import About from "./pages/About";
+
 import Test from "./components/Test";
 import './App.css';
 import axios from "axios";
@@ -62,6 +64,8 @@ class App extends Component {
               <Route exact path="/home" render={(props) => <Home {...props} updateUser={this.updateUser} /> } />
               <Route exact path="/saved" component={Saved} />
               <Route exact path="/community" component={Community} />
+              <Route exact path="/about" component={About} />
+
               <Route component={NoMatch} />
             </Switch>
             <Footer />
