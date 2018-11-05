@@ -1,10 +1,13 @@
 import React from "react";
-import { Col, Row, Container } from "../../components/Grid";
+import Grid from 'react-bootstrap/lib/Grid';
 import Jumbotron from 'react-bootstrap/lib/Jumbotron';
+import Row from 'react-bootstrap/lib/Row';
+import Col from 'react-bootstrap/lib/Col';
+
 
 
 const NoMatch = () => (
-  <Container fluid>
+  <Grid fluid>
     <Row>
       <Col size="md-12">
         <Jumbotron>
@@ -17,7 +20,7 @@ const NoMatch = () => (
         </Jumbotron>
       </Col>
     </Row>
-  </Container>
+  </Grid>
 );
 
 export default NoMatch;
