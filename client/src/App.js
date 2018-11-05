@@ -59,8 +59,8 @@ class App extends Component {
          
             <Switch>
               <Route exact path="/"  render={(props) => <Login {...props} updateUser={this.updateUser} /> }/>
-              <Route exact path="/home" render={(props) => <Home {...props} updateUser={this.updateUser} /> } />
-              <Route exact path="/saved" component={Saved} />
+              <Route exact path="/home" render={(props) =>  this.state.loggedIn ? ( <Home {...props} updateUser={this.updateUser} />) : (<Login {...props} updateUser={this.updateUser} /> )  } />
+              <Route exact path="/saved" render={(props) =>  this.state.loggedIn ? ( <Saved {...props} updateUser={this.updateUser} />) : (<Login {...props} updateUser={this.updateUser} /> )  } /> />
               <Route exact path="/community" component={Community} />
               <Route component={NoMatch} />
             </Switch>
