@@ -5,6 +5,9 @@ export default {
   getImages: function() {
     return axios.get("/api/uploads");
   },
+  getUserImages: function(username) {
+    return axios.get("/api/uploads" + `?user=${username}`);
+  },
   // Gets img by id
   getImage: function(id) {
     return axios.get("/api/uploads/" + id);

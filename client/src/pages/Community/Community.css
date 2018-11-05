@@ -1,5 +1,7 @@
 .img-container-community {
-    margin: 10px;
+    margin: 0 0 20px 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 .likes {

@@ -3,11 +3,12 @@ body {
   padding: 0;
   font-family: 'Quicksand', sans-serif;
   font-weight: 700;
-  font-size: 1.2em;
+  font-size: 1.2rem;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: url('./background.jpg');
   background-size: cover;
+  box-sizing: border-box;
 }
 
 code {

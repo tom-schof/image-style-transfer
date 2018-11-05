@@ -33,10 +33,10 @@
     padding: 0;
 }
 
-label, input, select, option, .form-control {
+label, input, select, option, .form-control, .transfer-button {
     font-family: 'Quicksand', sans-serif;
     font-weight: 700;
-    font-size: 0.85em!important;
+    font-size: 1.5rem!important;
 }
 
 label {
@@ -55,7 +55,7 @@ input:hover, .custom-file-input:hover, .custom-file-label:hover, select:hover {
 .caption {
     margin-top: 10px;
     margin-bottom: 5px;
-    font-size: 1.1em!important;
+    font-size: 2.3rem!important;
     font-weight: 700;
     background-color: none;
 }
@@ -70,4 +70,24 @@ input, .transfer-button, .form-control {
 
 #share-container{
     margin-top: 10px
+}
+
+.file-container {
+    background: none!important;
+    margin-top: 10px;
+}
+
+#file-input {
+    line-height: 1rem;
+    background: none!important;
+    font-size: 1.5rem!important;
+}
+
+.sub-container {
+    margin: 0 auto;
+}
+
+.row {
+    margin-right: 0!important; 
+    margin-left: 0!important;
 }

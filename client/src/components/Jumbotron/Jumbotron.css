@@ -1,8 +1,8 @@
 .jumbotron {
-    height: 160px;
-    padding-top: 25px;
-    margin: 20px 60px 25px;
+    padding: 10px;
+    margin: 20px 40px 25px;
     background-color: rgb(255, 226, 231, 0.9);
+    border-radius: .5rem;
 }
 
 p {
