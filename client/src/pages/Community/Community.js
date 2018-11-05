@@ -41,17 +41,17 @@ class Uploads extends Component {
           <div className="container">
             <div className="row mx-auto text-center">
               {this.state.uploads.map(image => (
-                <div className="col-md-4 mx-auto text-center img-container-community" key={image._id}>
-                  <img className="img-thumbnail" src={image.url} />
-                  <p className="likes">Likes: <span>{image.likes}</span></p>
-                  <button className="btn btn-light like-button" id={`like-${image._id}`} name={image._id} onClick={this.addLike}><span className="far fa-thumbs-up"></span></button>
-                  <button className="btn btn-light like-button" id={`dislike-${image._id}`} name={image._id} onClick={this.addDislike}><span className="far fa-thumbs-down"></span></button>
+                <div className="col-xs-12 col-sm-6 col-md-4 mx-auto text-center img-container-community" key={image._id}>
+                  <img className="img-thumbnail shadow" src={image.url} />
+                  <p className="likes text-shadow">Likes: <span>{image.likes}</span></p>
+                  <button className="btn btn-light like-button shadow" id={`like-${image._id}`} name={image._id} onClick={this.addLike}><span className="far fa-thumbs-up"></span></button>
+                  <button className="btn btn-light like-button shadow" id={`dislike-${image._id}`} name={image._id} onClick={this.addDislike}><span className="far fa-thumbs-down"></span></button>
                 </div>
               ))}
             </div>
           </div>
         ) : (
-            <h3>No Style Transfer Images to Display</h3>
+            <h3 className="text-center">No Style Transfer Images to Display</h3>
           )}
       </div>
     );

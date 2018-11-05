@@ -6,7 +6,7 @@ import Logout from '../../components/Logout';
 const Home = (props) => (
   <div>
       <Jumbotron title={"Image Creator"} body={"Apply one of our style models to an image of your choice and produce art using machine learning!"} />
-      <Canvas />
+      <Canvas username={props.username}/>
   </div>
 );
 
