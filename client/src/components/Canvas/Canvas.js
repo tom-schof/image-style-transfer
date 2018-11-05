@@ -12,6 +12,7 @@ class Canvas extends Component {
     styleModel: "",
     styleImg: "",
     resultImg: "",
+    imageUrl: "",
     transferMsg: "Transform your image!",
     transferStatus: false
   }
@@ -134,6 +135,7 @@ class Canvas extends Component {
         })
           .then(res => {
             console.log(res.data.secure_url);
+            this.setState({imageUrl: res.data.secure_url});
             API.saveImage({ url: res.data.secure_url });
           })
           .catch(err => console.log(err))
@@ -171,6 +173,9 @@ class Canvas extends Component {
     inputImg.src = this.state.inputImg;
 
     this.transferStyle(inputImg);
+    //Changing status to generate share buttons
+    this.setState({transferStatus: true});
+
   }
 
   generateShareButtons = () => {
