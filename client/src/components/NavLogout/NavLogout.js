@@ -1,12 +1,12 @@
 import React from "react";
-import "./Nav.css";
-import LoginForm from "../../components/LoginForm";
+import "./NavLogout.css";
+import Logout from "../../components/Logout";
 import {Container, Row, Col} from "../../components/Grid";
 import { Link } from "react-router-dom";
 
 
 
-const Nav = (props) => (
+const NavLogout = (props) => (
   <Container fluid>
   <nav className="navbar navbar-expand-lg navbar-dark bg-primary shadow-nav">
       <Row>
@@ -23,11 +23,11 @@ const Nav = (props) => (
           <h2 className="title">Style your life</h2>
         </Col>
         <Col size="md-2">
-         <LoginForm updateUser={props.updateUser} loggedIn /> 
+          (<Logout updateUser={props.updateUser} /> 
         </Col>
       </Row>
     </nav>
   </Container>
 );
 
-export default Nav;
+export default NavLogout;

@@ -56,7 +56,6 @@ class App extends Component {
     return (
         <Router>
           <div>
-         
             <Switch>
               <Route exact path="/"  render={(props) => <Login {...props} updateUser={this.updateUser} /> }/>
               <Route exact path="/home" render={(props) =>  this.state.loggedIn ? ( <Home {...props} updateUser={this.updateUser} />) : (<Login {...props} updateUser={this.updateUser} /> )  } />
