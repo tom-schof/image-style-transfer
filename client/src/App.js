@@ -5,8 +5,10 @@ import Login from "./pages/Login";
 import Home from "./pages/Home";
 import Saved from "./pages/Saved";
 import Community from "./pages/Community";
+import About from "./pages/About";
 import NoMatch from "./pages/NoMatch";
 import Footer from "./pages/Footer";
+
 import Test from "./components/Test";
 import './App.css';
 import axios from "axios";
@@ -60,8 +62,12 @@ class App extends Component {
           <Switch>
             <Route exact path="/" render={(props) => <Login {...props} updateUser={this.updateUser} />} />
             <Route exact path="/home" render={(props) => this.state.loggedIn ? (<Home {...props} updateUser={this.updateUser} username={this.state.username} />) : (<Login {...props} updateUser={this.updateUser} />)} />
+
             <Route exact path="/saved" render={(props) => this.state.loggedIn ? (<Saved {...props} updateUser={this.updateUser} username={this.state.username} />) : (<Login {...props} updateUser={this.updateUser} />)} /> />
             <Route exact path="/community" render={(props) => this.state.loggedIn ? (<Community {...props} updateUser={this.updateUser} username={this.state.username} />) : (<Login {...props} updateUser={this.updateUser} />)} /> />
+
+            <Route exact path="/about" component={About} />
+
             <Route component={NoMatch} />
           </Switch>
           <Footer />

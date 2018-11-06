@@ -1,0 +1,38 @@
+.jumbotron {
+  opacity: 0.85;
+}
+.jumbotron h1 {
+  text-align: center;
+}
+.panel {
+  opacity:0.9;
+}
+.panel-title{
+  font-size: x-large;
+  font-weight: bold!important;
+  text-align: center!important;
+}
+article img {
+  height:100px!important;
+  float:left!important;
+  margin: 0.25em 0.25em 1em 0;
+}
+
+article img.bootstrap {
+  margin-left: 5px;
+}
+
+
+.panel-body h3, .panel-body h4{
+  text-align: center;
+  margin-top: 0.1rem!important;
+}
+.panel-body p {
+  font-size: large!important;
+  font-weight: normal;
+}
+
+
+button {
+  text-align: center;
+}
