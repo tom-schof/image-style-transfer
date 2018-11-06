@@ -57,7 +57,7 @@ class Canvas extends Component {
     },
     booty: {
       model: "./models/ambassador-booty",
-      img: "./img/ambassador-booty.jpg"
+      img: "./img/unknown.png"
     },
     bororo: {
       model: "./models/bororo",
@@ -254,7 +254,7 @@ class Canvas extends Component {
                     <option value="wreck">Wreck</option>
                     <option value="matta">Matta</option>
                     <option value="mathura">Unknown (B&amp;W)</option>
-                    <option value="booty">Booty</option>
+                    <option value="booty">Mystery (DB)</option>
                     <option value="bororo">Bororo</option>
                     <option value="moth">Moth</option>
                     <option value="snorre">Snorre</option>

@@ -56,7 +56,6 @@ class Signup extends React.Component {
           // this.setState({
           //   redirectTo: '/home'
           // })
-
           if (response.status === 200) {
             // console.log("successful login");
             this.props.updateUser({
@@ -69,9 +68,8 @@ class Signup extends React.Component {
               redirectTo: '/home'
             });
           }
-
-        }
-      })
+          }
+        })
       .catch(error => {
         console.log("Sign up server error: " + error);
 
@@ -84,7 +82,7 @@ class Signup extends React.Component {
     } else {
 
       return (
-        <Jumbotron className="shadow">
+        <Jumbotron>
           <h2>Create an account!</h2>
 
           <Form onSubmit={this.handleSubmit} horizontal>
