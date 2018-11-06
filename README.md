@@ -1,4 +1,4 @@
-# Freaky-Styley
+# :fire: :zap: :volcano: Freaky-Styley :v: :metal: :fire:
 
 * Neural image style transfer in the browser.
 
@@ -13,7 +13,7 @@
 * Saved Page: See all of your styled images
 
 ## Built With
-* MERN full-stack
+* MERN full-stack (MongoDB, Express, React, NodeJS)
 * [Yarn](https://yarnpkg.com) - Dependency Management
 * [Paperspace](http://www.paperspace/) - Model training
 * [Cloudinary](https://cloudinary.com/) - Cloud-storage of user images
