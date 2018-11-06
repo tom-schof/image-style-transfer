@@ -1,16 +1,16 @@
 # <p align='center'>:fire: :zap: :volcano: freaky-styley :v: :metal: :fire:</p>
 
-* Neural image style transfer in the browser.
+* **Neural image style transfer** in the browser.
 
-* Create an acccount to get started.
+* **Create an acccount** to get started.
 
-* Upload your own image or pick a preset and then `filter` it through a trained model image.
+* **Upload your own image** or pick a preset and then `filter` it through a trained model image.
 
-* About Page: Brief overview of project
+* **About Page**: Brief overview of project
 
-* Community Page: See all user submitted styled images
+* **Community Page**: See all user submitted styled images
 
-* Saved Page: See all of your styled images
+* **Saved Page**: See all of your styled images
 
 ## Built With
 * MERN full-stack (MongoDB, Express, React, NodeJS)
