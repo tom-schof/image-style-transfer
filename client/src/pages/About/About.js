@@ -70,13 +70,13 @@ export default class About extends React.Component {
                     </a>
                   </article>
                   <article>
-                    <a href='https://nodejs.org/'>
-                      <img src='./img/icons/node.png' />
+                    <a href='https://mongodb.com/'>
+                      <img src='./img/icons/mongo.png' />
                     </a>
                   </article>
                   <article>
-                    <a href='https://mongodb.com/'>
-                      <img src='./img/icons/mongo.png' />
+                    <a href='https://js.tensorflow.org/'>
+                      <img src='./img/icons/tensorflow.png' />
                     </a>
                   </article>
                   <article>
@@ -84,15 +84,14 @@ export default class About extends React.Component {
                       <img src='./img/icons/express.png' />
                     </a>
                   </article>
-
-                  <article>
-                    <a href='https://js.tensorflow.org/'>
-                      <img src='./img/icons/tensorflow.png' />
-                    </a>
-                  </article>
                   <article>
                     <a href='https://react-bootstrap.github.io/'>
                       <img className='bootstrap'src='./img/icons/bootstrap.png' />
+                    </a>
+                  </article>
+                  <article>
+                    <a href='https://nodejs.org/'>
+                      <img src='./img/icons/node.png' />
                     </a>
                   </article>
                   <article>
