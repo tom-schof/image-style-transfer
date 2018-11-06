@@ -23,7 +23,7 @@ const NavLogout = (props) => (
           <h2 className="title">Style your life</h2>
         </Col>
         <Col size="md-2">
-          (<Logout updateUser={props.updateUser} /> 
+          <Logout updateUser={props.updateUser} /> 
         </Col>
       </Row>
     </nav>
