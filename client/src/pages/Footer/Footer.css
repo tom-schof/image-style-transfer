@@ -1,0 +1,31 @@
+.jumbotron h1 {
+  text-align: center;
+}
+
+.left {
+  text-align:left;
+  color: #000;
+}
+
+.right {
+  text-align:right;
+  float:right!important;
+  color: dimgrey;
+}
+
+.right strong {
+  color: #000;
+}
+
+
+.footer {
+  font-size: 16px;
+  padding: 1.5rem;
+  position: absolute;
+  bottom:0;
+  left:0;
+  width:100%;
+  background-color:lightblue;
+  opacity: 0.9;
+}
+
