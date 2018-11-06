@@ -1,7 +1,8 @@
 import React from "react";
 import { Button, Modal, Form, FormGroup, Col, ControlLabel, FormControl, } from 'react-bootstrap';
 import axios from 'axios';
-import { Redirect } from 'react-router-dom'
+import { Redirect } from 'react-router-dom';
+import "./LoginForm.css";
 
 
 class LoginForm extends React.Component {
@@ -17,8 +18,7 @@ class LoginForm extends React.Component {
         show: false,
         username: "",
         password: "",
-        redirectTo: null,
-        error: ""
+        redirectTo: null
       };
     }
     
@@ -44,7 +44,7 @@ class LoginForm extends React.Component {
     })
     .then(response => {
       console.log("Response: " + response);
-      if (response.status === 200){
+      if (response.status ===200){
         console.log("successful login");
         this.props.updateUser({
             loggedIn: true,
@@ -61,9 +61,7 @@ class LoginForm extends React.Component {
     })
     .catch(error =>{
       console.log("Login server error: " + error);
-      this.setState({
-        error: 'Error: Incorrect username or password'
-      });
+      
     })
   }
   
@@ -84,7 +82,7 @@ class LoginForm extends React.Component {
 
         <div>
           
-          <Button bsStyle="primary" bsSize="large" onClick={this.handleShow}>
+          <Button bsClass="button" bsSize="large"  onClick={this.handleShow}>
             Login
           </Button>
   
@@ -114,11 +112,10 @@ class LoginForm extends React.Component {
 
                 <FormGroup>
                     <Col smOffset={2} sm={10}>
-                    <Button type="submit">Log in</Button>
+                    <Button onClick={this.handleSubmit} type="submit">Log in</Button>
                     </Col>
                 </FormGroup>
-              </Form>
-              <div className="error" >{this.state.error}</div>
+              </Form>;
 
             </Modal.Body>
             <Modal.Footer>

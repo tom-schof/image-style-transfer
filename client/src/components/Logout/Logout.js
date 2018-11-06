@@ -1,7 +1,8 @@
 import React from "react";
 import { Button} from 'react-bootstrap';
 import axios from 'axios';
-import { Redirect } from 'react-router-dom'
+import { Redirect } from 'react-router-dom';
+import "./Logout.css";
 
 
 class Logout extends React.Component {
@@ -53,7 +54,7 @@ class Logout extends React.Component {
 
         <div>
           
-          <Button bsStyle="primary" bsSize="large" onClick={this.handleSubmit}>
+          <Button bsClass="button" bsSize="large"  onClick={this.handleSubmit}>
             Logout
           </Button>
 

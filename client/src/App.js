@@ -56,7 +56,7 @@ class App extends Component {
     return (
       <Router>
         <div>
-          <NavCustom />
+          {/* <NavCustom /> */}
           <Switch>
             <Route exact path="/" render={(props) => <Login {...props} updateUser={this.updateUser} />} />
             <Route exact path="/home" render={(props) => this.state.loggedIn ? (<Home {...props} updateUser={this.updateUser} username={this.state.username} />) : (<Login {...props} updateUser={this.updateUser} />)} />

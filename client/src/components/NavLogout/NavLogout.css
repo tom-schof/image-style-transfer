@@ -8,12 +8,10 @@
     position: relative !important;
 }
 
-
-.navbar {
+.navbar-dark .navbar-brand {
     color: black!important;
-    font-size: 2rem;
+    font-size: 25px;
     font-weight: 700;
-    background-color: rgb(248, 254, 255)!important;
 }
 
 .shadow-nav {
@@ -30,9 +28,6 @@
 }
 
 .links{
-    padding: 10px !important;
+    padding: 20px !important;
     text-align: center;
-}
-.navbar-brand {
-    margin-bottom: 0;
 }
