@@ -7,3 +7,7 @@
 .text-shadow { 
   text-shadow: 2px 2px 2px rgb(255, 226, 231)!important;
 }
+
+body {
+  margin-bottom:7rem;
+}
