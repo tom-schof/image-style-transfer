@@ -5,6 +5,9 @@ import Jumbotron from 'react-bootstrap/lib/Jumbotron';
 import Row from 'react-bootstrap/lib/Row';
 import Col from 'react-bootstrap/lib/Col';
 import Panel from 'react-bootstrap/lib/Panel';
+import NavCustom from '../../components/NavCustom';
+import NavLogout from '../../components/NavLogout';
+
 import Nav from '../../components/Nav';
 import './About.css';
 
@@ -12,7 +15,7 @@ export default class About extends React.Component {
   render() {
     return (
       <div>
-        <Nav />
+        <NavCustom />
         <Jumbotron>
           <Grid>
             <h1>About</h1>
