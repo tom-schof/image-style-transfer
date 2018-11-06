@@ -1,3 +1,8 @@
+@font-face {
+    font-family: greatVibes;
+    src: url(./great-vibes/GreatVibes-Regular.otf);
+}
+
 .imgDiv{
     height: 410;
     justify-content: 'center';
@@ -5,7 +10,30 @@
 }
 
 .loginImage {
-    height: 175px;
-    margin-top: 100px;
-    margin-left: 15px;
+    width: 100%;
+    margin-top: 70px;
+}
+
+.login-col {
+    margin: 0;
+    padding: 0 20px 10px 20px;
+}
+
+.login-col > .jumbotron {
+    margin: 0;
+}
+
+.login-container {
+    padding: 0;
+}
+
+.header-message {
+    font-family: greatVibes;
+    font-weight: 700;
+    font-size: 80px;
+    width: 100%;
+    margin-bottom: 40px;
+    background-color: rgb(255, 226, 231, 0.9);
+    padding: 30px;
+    border-radius: 0.5rem;
 }
