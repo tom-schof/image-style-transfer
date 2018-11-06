@@ -1,4 +1,4 @@
-# :fire: :zap: :volcano: Freaky-Styley :v: :metal: :fire:
+<p align='center'># :fire: :zap: :volcano: Freaky-Styley :v: :metal: :fire:</p>
 
 * Neural image style transfer in the browser.
 
