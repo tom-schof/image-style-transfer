@@ -18,6 +18,10 @@
 * [Paperspace](http://www.paperspace/) - Model training
 * [Cloudinary](https://cloudinary.com/) - Cloud-storage of user images
 
+## Heroku Deployment
+
+[Freaky-Styley Deployed](https://freakey-styley-brt2.herokuapp.com/)
+
 ## Contributing
 
 If interested in contributing to this project.
