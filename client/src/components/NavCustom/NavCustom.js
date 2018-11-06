@@ -9,7 +9,10 @@ const Nav = () => (
     </p>
   <ul className="nav navbar-nav">
     <li><Link to={"/home"}>Home</Link></li>
+    <li><Link to={"/about"}>About</Link></li>
     <li><Link to={"/community"}>Community</Link></li>
+    <li><Link to={"/"}>Login</Link></li>
+
   </ul>
   </nav >
 );

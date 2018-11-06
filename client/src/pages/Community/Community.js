@@ -4,6 +4,7 @@ import Jumbotron from "../../components/Jumbotron";
 import API from "../../utils/API.js";
 import { Col, Row, Container } from "../../components/Grid";
 import { List, ListItem } from "../../components/List";
+import NavCustom from '../../components/NavCustom';
 import "./Community.css";
 
 class Uploads extends Component {
@@ -36,6 +37,7 @@ class Uploads extends Component {
   render() {
     return (
       <div>
+        <NavCustom />
         <Jumbotron title={"Community Style Transfer Images"} body={"Check out the art that other users created!"} />
         {this.state.uploads.length ? (
           <div className="container">
