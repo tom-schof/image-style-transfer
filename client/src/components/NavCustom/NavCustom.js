@@ -14,7 +14,7 @@ const NavCustom = (props) => (
           <span className="icon-bar"></span>
         </button>
         <p className="navbar-brand">
-          <Link to={"/home"}>neurostyle</Link>
+          <Link to={"/home"}>freaky-styley</Link>
         </p>
       </div>
 

@@ -15,7 +15,7 @@ const NavLogout = (props) => (
           <span className="icon-bar"></span>
         </button>
         <p className="navbar-brand">
-          <Link to={"/home"}>neurostyle</Link>
+          <Link to={"/home"}>freaky-styley</Link>
         </p>
       </div>
 
@@ -29,20 +29,8 @@ const NavLogout = (props) => (
           <li><Logout updateUser={props.updateUser} /></li>
         </ul>
       </div>
-
-      {/* <Logout updateUser={props.updateUser} /> */}
-
-        {/* <p className="navbar-brand">
-          <Link to={"/home"}>neurostyle</Link>
-        </p>
-        <ul className="nav navbar-nav">
-          <li><Link to={"/home"}>Create</Link></li>
-          <li><Link to={"/saved"}>Your Images</Link></li>
-          <li><Link to={"/community"}>Community</Link></li>
-        </ul>
-        <Logout updateUser={props.updateUser} /> */}
-      </div>
+    </div>
   </nav >
-    );
-    
+);
+
 export default NavLogout;
