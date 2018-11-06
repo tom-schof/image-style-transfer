@@ -90,10 +90,14 @@ class Canvas extends Component {
     zebra: {
       model: "./models/zebra",
       img: "./img/zebra.jpg"
+    },
+    spongebob: {
+      model: "./models/spongebob",
+      img: "./img/spongebob.jpg"
     }
   };
 
-  styleArray = ["splatter", "la_muse", "mathura", "matta", "rain_princess", "scream", "udnie", "wave", "wreck", "booty", "bororo", "moth", "snorre", "simpsons", "reflection", "rickmorty", "lion", "zebra"];
+  styleArray = ["splatter", "la_muse", "mathura", "matta", "rain_princess", "scream", "udnie", "wave", "wreck", "booty", "bororo", "moth", "snorre", "simpsons", "reflection", "rickmorty", "lion", "zebra", "spongebob"];
 
   componentDidMount() {
     //   this.setState({
@@ -137,7 +141,7 @@ class Canvas extends Component {
           .then(res => {
             console.log(res.data.secure_url);
             this.setState({imageUrl: res.data.secure_url});
-            API.saveImage({ url: res.data.secure_url });
+            API.saveImage({ url: res.data.secure_url, user: this.props.username });
           })
           .catch(err => console.log(err))
       });
@@ -259,6 +263,7 @@ class Canvas extends Component {
                     <option value="rickmorty">Rick &amp; Morty</option>
                     <option value="lion">Lion</option>
                     <option value="zebra">Zebra</option>
+                    <option value="spongebob">Spongebob</option>
                   </select>
                 </div>
               </form>
@@ -278,12 +283,12 @@ class Canvas extends Component {
                   this.state.inputImg && this.state.styleImg ? this.handleSubmit() : this.setState({ transferMsg: "Select input and style image!" })
                 }
                 }>Transfer Style</button>
-                <div className="share-container">
+                {/* <div className="share-container">
                   {
                     this.state.transferStatus ?
                       this.generateShareButtons()
                       : null}
-                </div>
+                </div> */}
               </div>
             </div>
           </div>

@@ -1,3 +1,8 @@
+@font-face {
+  font-family: greatVibes;
+  src: url(./great-vibes/GreatVibes-Regular.otf);
+}
+
 .jumbotron {
     padding: 10px;
     margin: 20px 40px 25px;
@@ -8,3 +13,8 @@
 p {
   font-size: 24px!important;
 }
+
+/* .title {
+  font-family: greatVibes;
+  text-align: center;
+} */

@@ -54,9 +54,9 @@ class Logout extends React.Component {
 
         <div>
           
-          <Button bsClass="button" bsSize="large"  onClick={this.handleSubmit}>
+          <button className="btn btn-default login-btn navbar-right" onClick={this.handleSubmit}>
             Logout
-          </Button>
+          </button>
 
         </div>
       );

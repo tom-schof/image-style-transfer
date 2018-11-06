@@ -22,13 +22,6 @@
     box-shadow: 3px -1px 18px -2px rgba(0,0,0,0.75);
 }
 
-.title{
-    font-family: greatVibes;
-    font-size: 100px;
-    color: rgb(99, 223, 99);
-    text-align: center;
-}
-
 .links{
     padding: 10px !important;
     text-align: center;

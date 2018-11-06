@@ -4,30 +4,20 @@ import Logout from "../../components/Logout";
 import {Container, Row, Col} from "../../components/Grid";
 import { Link } from "react-router-dom";
 
-
-
 const NavLogout = (props) => (
-  <Container fluid>
-  <nav className="navbar navbar-expand-lg navbar-dark bg-primary shadow-nav">
-      <Row>
-        <Col size="md-2">
-          <div className="links"> 
-            <a className="navbar-brand" href="/">neurostyle</a>
-            <Link to={"/home"}>Home</Link>
-            <br></br>
-            <Link to={"/Community"}>Community</Link>
-          </div>
-         
-        </Col>
-        <Col size="md-8">
-          <h2 className="title">Style your life</h2>
-        </Col>
-        <Col size="md-2">
-          <Logout updateUser={props.updateUser} /> 
-        </Col>
-      </Row>
-    </nav>
-  </Container>
+  <nav className="navbar navbar-default shadow-nav">
+  <div className="container-fluid">
+    <p className="navbar-brand">
+      <Link to={"/home"}>neurostyle</Link>
+    </p>
+  <ul className="nav navbar-nav">
+    <li><Link to={"/home"}>Create</Link></li>
+    <li><Link to={"/saved"}>Your Images</Link></li>
+    <li><Link to={"/community"}>Community</Link></li>
+  </ul>
+  <Logout updateUser={props.updateUser} />
+  </div>
+  </nav >
 );
 
 export default NavLogout;
