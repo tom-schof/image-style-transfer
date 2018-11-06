@@ -36,3 +36,7 @@ article img.bootstrap {
 button {
   text-align: center;
 }
+
+.about-header {
+  margin: 0!important;
+}

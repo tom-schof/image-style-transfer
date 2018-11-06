@@ -24,6 +24,7 @@ const NavLogout = (props) => (
           <li><Link to={"/home"}>Create</Link></li>
           <li><Link to={"/saved"}>Your Images</Link></li>
           <li><Link to={"/community"}>Community</Link></li>
+          <li><Link to={"/about"}>About</Link></li>
         </ul>
         <ul className="nav navbar-nav navbar-right">
           <li><Logout updateUser={props.updateUser} /></li>
