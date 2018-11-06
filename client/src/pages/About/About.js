@@ -13,7 +13,7 @@ export default class About extends React.Component {
     return (
       <div>
         <NavCustom />
-        <Jumbotron>
+        <Jumbotron className='shadow'>
           <Grid>
             <h1 className="about-header">About</h1>
           </Grid>
@@ -21,7 +21,7 @@ export default class About extends React.Component {
         <Grid>
           <Row>
             <Col md={4}>
-              <Panel>
+              <Panel className='shadow'>
                 <Panel.Heading>
                   <Panel.Title componentClass="h3">Overview</Panel.Title>
                 </Panel.Heading>
@@ -56,7 +56,7 @@ export default class About extends React.Component {
               </Panel>
             </Col>
             <Col md={4}>
-              <Panel>
+              <Panel className='shadow'>
                 <Panel.Heading>
                   <Panel.Title componentClass="h3">Technologies Used</Panel.Title>
                 </Panel.Heading>
@@ -100,7 +100,7 @@ export default class About extends React.Component {
               </Panel>
             </Col>
             <Col md={4}>
-              <Panel>
+              <Panel className='shadow'>
                 <Panel.Heading>
                   <Panel.Title componentClass="h3">Neural Style Transfer</Panel.Title>
                 </Panel.Heading>
@@ -117,6 +117,13 @@ export default class About extends React.Component {
                     <li>
                       <p>
                         Some image style models were trained through <a href='https://www.paperspace/com'>Paperspace</a> using this docker container, <a href='https://hub.docker.com/r/cvalenzuelab/styletransfer/'>cvalenzuelab/styletransfer/</a>
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        <a href='https://github.com/lengstrom/fast-style-transfer' target='_blank'>
+                          Fast-Style-Transfer</a>: easy set-up for training style reference images.
+
                       </p>
                     </li>
                   </ul>

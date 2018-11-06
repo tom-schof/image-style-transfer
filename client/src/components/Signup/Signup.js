@@ -82,7 +82,7 @@ class Signup extends React.Component {
     } else {
 
       return (
-        <Jumbotron>
+        <Jumbotron className='shadow'>
           <h2>Create an account!</h2>
 
           <Form onSubmit={this.handleSubmit} horizontal>
