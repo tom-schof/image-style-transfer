@@ -283,12 +283,12 @@ class Canvas extends Component {
                   this.state.inputImg && this.state.styleImg ? this.handleSubmit() : this.setState({ transferMsg: "Select input and style image!" })
                 }
                 }>Transfer Style</button>
-                {/* <div className="share-container">
+                <div className="share-container">
                   {
                     this.state.transferStatus ?
                       this.generateShareButtons()
                       : null}
-                </div> */}
+                </div>
               </div>
             </div>
           </div>
